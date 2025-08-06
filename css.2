@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion FAQ</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .container {
+      flex: 1;
+      padding: 40px;
+      background: #f9f9f9;
+    }
+
+    .accordion {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    .accordion-item {
+      border: 1px solid #000;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      background: #fff;
+      padding: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+    }
+
+    label::after {
+      content: "▾";
+      position: absolute;
+      right: 20px;
+      transition: transform 0.3s;
+    }
+
+    input:checked + label {
+      background: #3c50e0;
+      color: white;
+    }
+
+    input:checked + label::after {
+      transform: rotate(180deg);
+    }
+
+    .content {
+      display: none;
+      background: #fff;
+      padding: 15px;
+      line-height: 1.5;
+      border-top: 1px solid #000;
+    }
+
+    input:checked + label + .content {
+      display: block;
+    }
+
+    /* Right-side design */
+    .right {
+      background: #6c5ce7;
+      color: white;
+      padding: 40px;
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .right h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .right p {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="accordion">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item1" checked>
+        <label for="item1">Web Designing</label>
+        <div class="content">
+          I'm Usman here. I specialize in creating beautiful and user-friendly website designs that are responsive and modern.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item2">
+        <label for="item2">Web Development</label>
+        <div class="content">
+          Learn to build powerful websites and dynamic web applications.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item3">
+        <label for="item3">App Development</label>
+        <div class="content">
+          Mobile app development for iOS and Android platforms.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item4">
+        <label for="item4">Game Development</label>
+        <div class="content">
+          Dive into the world of game engines and interactive experiences.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item5">
+        <label for="item5">Digital Marketing</label>
+        <div class="content">
+          Learn SEO, SEM, content marketing, and more.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <input type="radio" name="accordion" id="item6">
+        <label for="item6">Graphics Designing</label>
+        <div class="content">
+          Create visually compelling designs and illustrations.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="right">
+    <h1>Accordion</h1>
+    <p>HTML CSS <br> & No JavaScript</p>
+  </div>
+
+</body>
+</html>
